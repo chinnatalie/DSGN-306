@@ -19,3 +19,56 @@
 	text-align: center;
 	font-size: 5vw;
 }
+
+.box{
+	border-style: solid;
+	display: inline-block;
+	height: 250px;
+	width: 250px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 50px;
+	font-size: 40px;
+	position: relative;
+}
+
+#strawberries{ 
+	background-color: pink;
+}
+#mango{ 
+	background-color: orange;
+}
+#raspberries{ 
+	background-color: red;
+}
+#peaches{ 
+	background-color: coral;
+}
+#kale{ 
+	background-color: LimeGreen;
+}
+#spinach{ 
+	background-color: DarkGreen;
+}
+
+#outerdiv{
+
+}
+.itemimage{
+	height: 250px;
+	padding-left: 50px;
+	position: relative;
+	display: inline-block;
+}
+.title{
+	display: inline-block;
+	position: relative;
+}
+
+span{
+	width: 100px; 
+	position: absolute;
+	margin-top: 10px;
+	bottom: 0;
+	padding-left: 15px;
+}
