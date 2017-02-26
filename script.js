@@ -4,6 +4,5 @@ function gobytype() {
 	window.location.href="nutrition_type.html";
 }
 function gobyingredient() {
-	//change link once the page has been created.
-	window.location.href="nutrition_type.html";
+	window.location.href="ingredient_type.html";
 }
