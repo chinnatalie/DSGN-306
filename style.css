@@ -23,13 +23,13 @@
 .box{
 	border-style: solid;
 	display: inline-block;
-	height: 250px;
-	width: 250px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 50px;
-	font-size: 40px;
+	height: 25vw;
+	width: 25vw;
+	margin-bottom: 1vw;
+	margin-left: 3vw;
+	font-size: 4vw;
 	position: relative;
+	text-align: left;
 }
 
 #strawberries{ 
@@ -52,7 +52,7 @@
 }
 
 #outerdiv{
-
+	text-align: center;
 }
 .itemimage{
 	height: 100px;
