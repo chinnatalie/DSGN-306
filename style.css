@@ -55,14 +55,23 @@
 
 }
 .itemimage{
-	height: 250px;
+	height: 100px;
 	padding-left: 50px;
-	position: relative;
-	display: inline-block;
+	float: left;
 }
 .title{
-	display: inline-block;
-	position: relative;
+	float: left;
+	padding-left: 40px;
+	font-size: 25px;
+}
+
+.instructions{
+	padding-top:100px; 
+	width: 100%;
+	display: block;
+	font-size: 40px;
+	padding-left: 150px
+
 }
 
 span{
