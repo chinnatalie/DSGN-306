@@ -1,0 +1,21 @@
+#welcomemsg {
+	text-align: center;
+	padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 36px;
+}
+.opt2container{
+	text-align: center;
+	padding-top: 2vw;
+}
+.options {
+	border: 1px solid blue;
+	width: 20vw;
+	height: 20vw;
+	margin: 2vw;
+	padding: 1vw;
+	display: inline-block;
+	text-align: center;
+	font-size: 5vw;
+}
