@@ -6,3 +6,6 @@ function gobytype() {
 function gobyingredient() {
 	window.location.href="ingredient_type.html";
 }
+function gotopage(url) {
+        window.location.href=url;
+}
