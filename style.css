@@ -19,17 +19,24 @@
 	text-align: center;
 	font-size: 5vw;
 }
-
 .box{
 	border-style: solid;
 	display: inline-block;
 	height: 25vw;
 	width: 25vw;
 	margin-bottom: 1vw;
-	margin-left: 3vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 	font-size: 4vw;
 	position: relative;
 	text-align: left;
+}
+.nav{
+	float: left;
+	display: inline-block;
+	width: 2vw;
+	padding-top: 41vh;
+	font-size: 5vw;
 }
 
 #strawberries{ 
@@ -52,11 +59,14 @@
 }
 
 #outerdiv{
+	float: left;
 	text-align: center;
+	display: inline-block;
+	width: 90vw;
 }
 .itemimage{
-	height: 250px;
-	padding-left: 50px;
+	height: 100%;
+	padding-left: 5vw;
 	position: relative;
 	display: inline-block;
 }
@@ -66,9 +76,7 @@
 }
 
 span{
-	width: 100px; 
+	padding-left: 3vw;
 	position: absolute;
-	margin-top: 10px;
 	bottom: 0;
-	padding-left: 15px;
 }
