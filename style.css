@@ -120,11 +120,14 @@
 	display: inline-block;
 	padding-left: 2vw;
 	padding-top: 5vw;
-	font-size: 7vw;
+	font-size: 5vw;
 	width: 60vw;
 	text-align: left;
 }
-
+.instruction {
+	font-size: 5vw;
+	margin: 0;
+}
 span{
 	padding-left: 3vw;
 	position: absolute;
