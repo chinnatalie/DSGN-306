@@ -57,21 +57,45 @@
 }
 
 #strawberries{ 
+	background-image: url('icons/wstrawberry.png');
+	background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center; 
 	background-color: pink;
 }
 #mango{ 
+	background-image: url('icons/wmango.png');
+	background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center; 
 	background-color: orange;
 }
 #raspberries{ 
+	background-image: url('icons/wraspberry.png');
+	background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center; 
 	background-color: red;
 }
 #peaches{ 
+	background-image: url('icons/wpeach.png');
+	background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center; 
 	background-color: coral;
 }
 #kale{ 
+	background-image: url('icons/wkale.png');
+	background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center; 
 	background-color: LimeGreen;
 }
 #spinach{ 
+	background-image: url('icons/wspinach.png');
+	background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center; 
 	background-color: DarkGreen;
 }
 
