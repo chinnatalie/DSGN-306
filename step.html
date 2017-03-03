@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+  <head>
+  <body>
+    <div class="fullwidthcontainer">
+      <div style="font-size: 8vw;">Add</div>
+      <div id="instruct1" style="font-size: 10vw;">Mango</div>
+      <div id="instruct2" style="font-size: 8vw;">to</div>
+      <div style="font-size: 10vw;">the blue line</div>
+    </div>
+    <div class="fullwidthcontainer">
+      <div class="opt2container">
+        <div class="button" onclick="nextstep()">Done!</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var query = window.location.href;
+    var ingredients = query.split("ingredient=");
+    var ingredient = ingredients[1];
+    var url = 'step.html?ingredient=';
+    if (ingredients.length > 2) {
+      ingredient = ingredients[1].slice(0, -1);
+    }
+    document.getElementById('instruct1').innerHTML = ingredient;
+    function nextstep() {
+      url = url + ingredients[2];
+      if (ingredients.length == 3) {
+        gotopage(url);
+      } else if (ingredients.length > 3) {
+        for (i = 3; i < ingredients.length; i++) {
+          url = url + 'ingredient=' + ingredients[i];
+          if (i == ingredient.length - 1) {
+            url = url + 'ingredient=' + ingredients[i].slice(0, -1);
+          }
+        }
+        gotopage(url);
+      } else {
+        gotopage('blendingpage.html');
+      }
+    }
+  </script>
+</html>
