@@ -5,10 +5,23 @@
     <script type="text/javascript" src="script.js"></script>
   </head>
 
+  <script>
+      var array = [0, 0, 0, 0, 0, 0];
+      console.log(array);
+      function x(number) {
+          if (array[number] == 0) {
+              array[number] = 1;
+          } else {
+              array[number] = 0;
+          }
+          console.log(array);
+      }
+  </script>
+
   <body>
     <div class="nav" onclick="gotopage('index.html');"><</div>
     <div id="main">
-      <div class="box" id="strawberries"> <!--<img src="icons/wstrawberry.png"></img>--><span> Strawberries </span></div>
+      <div class="box" id="strawberries" onclick="x(0);"> <!--<img src="icons/wstrawberry.png"></img>--><span> Strawberries </span></div>
       <div class="box" id="raspberries"> <span> Raspberries </span></div>
       <div class="box" id="peaches"> <span> Peaches </span></div>
       <div class="box" id="mango" onclick="gotopage('Mango_Kale_Smoothie.html')"> <span> Mango </span></div>
