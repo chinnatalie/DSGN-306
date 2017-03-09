@@ -27,14 +27,18 @@
     function nextstep() {
       url = url + ingredients[2];
       if (ingredients.length == 3) {
+          console.log(url);
         gotopage(url);
       } else if (ingredients.length > 3) {
-        for (i = 3; i < ingredients.length; i++) {
-          url = url + 'ingredient=' + ingredients[i];
-          if (i == ingredient.length - 1) {
-            url = url + 'ingredient=' + ingredients[i].slice(0, -1);
+          for (i = 3; i < ingredients.length; i++) {
+              if (i == ingredients.length - 1) {
+                  url = url + 'ingredient=' + ingredients[i];
+              } else if (i < ingredients.length - 1) {
+              console.log(url);
+            url = url + 'ingredient=' + ingredients[i].slice(0, -1) + '&';
           }
         }
+        console.log(url);
         gotopage(url);
       } else {
         gotopage('blendingpage.html');
