@@ -6,28 +6,49 @@
   </head>
 
   <script>
-      var array = [0, 0, 0, 0, 0, 0];
-      console.log(array);
+      var choice = [0, 0, 0, 0, 0, 0];
       function x(number) {
-          if (array[number] == 0) {
-              array[number] = 1;
+          if (choice[number] == 0) {
+              choice[number] = 1;
           } else {
-              array[number] = 0;
+              choice[number] = 0;
           }
-          console.log(array);
       }
+	  //Recipes: Mango-Kale, Raspberry-Mango, Peach-Spinach
+	  var recipe = [[0, 0, 0, 1, 0, 1], [0, 1, 0, 1, 0, 0], [0, 0, 1, 1, 1, 0]];
+	  var difference = [0, 0, 0];
+	  var i;
+	  for(i=0; i<difference.length; i++); {
+		  for(ii=0; ii<choice.length; ii++); {
+			 difference[i]+=Math.abs(choice[ii]-difference[i][ii]);
+			 console.log(difference);
+		  }
+	  }
+	  var best = Math.min.apply(Math, difference);
+	  if (best == difference[0]) {
+		var link = Mango_Kale_Smoothie.html;
+	  } else if (best == difference[1]) {
+		var link = raspmang.html;
+	  } else {
+		var link = 'peachspin.html';
+	  }
+	  console.log(link);
+	  function myFunction(divObj) {
+			divObj.style.opacity=0.5;
+		}
   </script>
 
   <body>
     <div class="nav" onclick="gotopage('index.html');"><</div>
     <div id="main">
-      <div class="box" id="strawberries" onclick="x(0);"> <!--<img src="icons/wstrawberry.png"></img>--><span> Strawberries </span></div>
-      <div class="box" id="raspberries"> <span> Raspberries </span></div>
-      <div class="box" id="peaches"> <span> Peaches </span></div>
-      <div class="box" id="mango" onclick="gotopage('Mango_Kale_Smoothie.html')"> <span> Mango </span></div>
-      <div class="box" id="spinach"> <span> Spinach </span></div>
-      <div class="box" id="kale" onclick="gotopage('Mango_Kale_Smoothie.html')"> <span> Kale </span></div>
+      <div class="box" id="strawberries" onclick="x(0);myFunction(this);"> <!--<img src="icons/wstrawberry.png"></img>--><span> Strawberries </span></div>
+      <div class="box" id="raspberries" onclick="x(1);myFunction(this);"> <span> Raspberries </span></div>
+      <div class="box" id="peaches" onclick="x(2);myFunction(this);"> <span> Peaches </span></div>
+      <div class="box" id="mango" onclick="x(3);myFunction(this);"> <span> Mango </span></div>
+      <div class="box" id="spinach" onclick="x(4);myFunction(this);"> <span> Spinach </span></div>
+      <div class="box" id="kale" onclick="x(5);myFunction(this);"> <span> Kale </span></div>
     </div>
+	<div class="nav" onclick="gotopage('Mango_Kale_Smoothie.html');">></div>
   </body>
 
 </html>
