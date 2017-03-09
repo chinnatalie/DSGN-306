@@ -35,7 +35,39 @@
 	  console.log(link);
 	  function myFunction(divObj) {
 			divObj.style.opacity=0.5;
-		}
+	  }
+	  function submit() {
+          var flag = false
+	      var url = 'Mango_Kale_Smoothie.html?'
+	      for (var i = 0; i < 6; i++) {
+	          if (choice[i] == 1) {
+	              if (flag) {
+	                  url = url + '&';
+	              }
+	              switch (i) {
+	                  case 0:
+	                      url = url + 'ingredient=Strawberry';
+	                      break;
+	                  case 1:
+	                      url = url + 'ingredient=Raspberries';
+	                      break;
+	                  case 2:
+	                      url = url + 'ingredient=Peaches';
+	                      break;
+	                  case 3:
+	                      url = url + 'ingredient=Mango';
+	                      break;
+	                  case 4:
+	                      url = url + 'ingredient=Spinach';
+	                      break;
+	                  case 5:
+                          url = url + 'ingredient=Kale'
+	              }
+	              flag = true;
+	          }
+	      }
+	      gotopage(url);
+	  }
   </script>
 
   <body>
@@ -48,7 +80,7 @@
       <div class="box" id="spinach" onclick="x(4);myFunction(this);"> <span> Spinach </span></div>
       <div class="box" id="kale" onclick="x(5);myFunction(this);"> <span> Kale </span></div>
     </div>
-	<div class="nav" onclick="gotopage('Mango_Kale_Smoothie.html');">></div>
+	<div class="nav" onclick="submit();">></div>
   </body>
 
 </html>

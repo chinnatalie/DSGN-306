@@ -9,12 +9,46 @@
     <div id="outerdiv">
       <div class="fullwidthcontainer">
         <div class="imagecontainer"> <img src="kaleimage.gif" class="itemimage" alt="Mountain View"></div>
-        <div class="title">Kale and Mango Smoothie</div>
+        <div id="recipe" class="title">Kale and Mango Smoothie</div>
       </div>
     </div>
     <div class="opt2container">
-      <div class="button" onclick="gotopage('step.html?ingredient=Mango&ingredient=Kale&ingredient=OrangeJuice');">Let's start!</div>
+      <div class="button" onclick="next();">Let's start!</div>
     </div>
   </body>
-
 </html>
+<script>
+    var query = window.location.href;
+    var ingredients = query.split("ingredient=");
+    var ingredient = ingredients[1];
+    var url = 'step.html?' + query.split('?')[1];
+    var recipe = [];
+    if (ingredients.length > 2) {
+        ingredient = ingredients[1].slice(0, -1);
+    }
+    recipe[0] = ingredient;
+    if (ingredients.length > 2) {
+        for (var i = 2; i < ingredients.length; i++) {
+            if (i == ingredients.length - 1) {
+                recipe[recipe.length] = ingredients[i];
+            } else {
+                recipe[recipe.length] = ingredients[i].slice(0, -1);
+            }
+            
+        }
+    }
+    var recipename = '';
+    for (var i = 0; i < recipe.length; i++) {
+        if (i == recipe.length - 1) {
+            recipename = recipename + recipe[i];
+        } else if (i == recipe.length - 2) {
+            recipename = recipename + recipe[i] + ' and ';
+        } else {
+            recipename = recipename + recipe[i] + ', ';
+        }
+    }
+    document.getElementById('recipe').innerHTML = recipename + ' Smoothie';
+    function next() {
+        gotopage(url + '&ingredient=OrangeJuice');
+    }
+</script>
