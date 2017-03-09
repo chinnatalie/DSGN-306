@@ -20,26 +20,40 @@
     var ingredients = query.split("ingredient=");
     var ingredient = ingredients[1];
     var url = 'step.html?ingredient=';
+
+    var recipe = [];
     if (ingredients.length > 2) {
       ingredient = ingredients[1].slice(0, -1);
     }
     document.getElementById('instruct1').innerHTML = 'Add ' + ingredient;
+
+    recipe[0] = ingredient;
+    if (ingredients.length > 2) {
+        for (var i = 2; i < ingredients.length; i++) {
+            if (i == ingredients.length - 1) {
+                recipe[recipe.length] = ingredients[i];
+            } else {
+                recipe[recipe.length] = ingredients[i].slice(0, -1);
+            }
+
+        }
+    }
+
     function nextstep() {
+        
       url = url + ingredients[2];
       if (ingredients.length == 3) {
           console.log(url);
         gotopage(url);
       } else if (ingredients.length > 3) {
-          for (i = 3; i < ingredients.length; i++) {
-              if (i == ingredients.length - 1) {
-                  url = url + 'ingredient=' + ingredients[i];
-              } else if (i < ingredients.length - 1) {
-              console.log(url);
-            url = url + 'ingredient=' + ingredients[i].slice(0, -1) + '&';
+          for (var i = 2; i < recipe.length; i++) {
+              if (i == 2) {
+                  url = url + 'ingredient=' + recipe[i];
+              } else {
+                  url = url + '&ingredient=' + recipe[i];
+              }
           }
-        }
-        console.log(url);
-        gotopage(url);
+          gotopage(url);
       } else {
         gotopage('blendingpage.html');
       }
